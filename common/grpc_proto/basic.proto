@@ -1,0 +1,27 @@
+syntax = "proto3";
+service BasicService {
+    rpc InferenceItem (RequestItem) returns (ItemResult);
+    rpc StreamInferenceItem (stream RequestItem) returns (stream ItemResult);
+    rpc ChangeThreads (ThreadRequest) returns (ThreadReply);
+}
+
+message RequestItem {
+    bytes items = 1;
+    bool preprocessed = 2;
+    uint64 id = 3;
+    uint64 size = 4;
+}
+
+message ItemResult {
+    bytes results = 1;
+    uint64 id = 2;
+    uint64 size = 3;
+}
+
+message ThreadRequest {
+    int32 threads = 1;
+}
+
+message ThreadReply {
+    bool ok = 1;
+}
