@@ -1,0 +1,19 @@
+<app-page-header title="configuration.load-generator-configuration"></app-page-header>
+<mat-card>
+    <form class="form-field-full">
+        <app-form-input [form]="form" [input]="dataset"></app-form-input>
+        <app-form-input [form]="form" [input]="scenario"></app-form-input>
+        <app-form-input [form]="form" [input]="minNumberOfThreads"></app-form-input>
+        <app-form-input [form]="form" [input]="maxNumberOfThreads"></app-form-input>
+        <app-form-input [form]="form" [input]="minDuration"></app-form-input>
+        <app-form-input [form]="form" [input]="maxDuration"></app-form-input>
+        <app-form-input [form]="form" [input]="targetQps"></app-form-input>
+        <app-form-input [form]="form" [input]="mode"></app-form-input>
+        <app-form-input [form]="form" [input]="samplesPerQuery"></app-form-input>
+        <app-form-input [form]="form" [input]="maxOutgoingQueries"></app-form-input>
+        <app-form-input [form]="form" [input]="repeat"></app-form-input>
+        <button mat-raised-button color="primary" class="m-t-8" (click)="onSave()">
+            {{ 'others.save' | translate }}
+        </button>
+    </form>
+</mat-card>

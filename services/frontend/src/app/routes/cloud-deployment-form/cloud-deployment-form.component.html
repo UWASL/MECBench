@@ -1,0 +1,15 @@
+<app-page-header title="configuration.cloud-deployment-configuration"></app-page-header>
+<mat-card>
+    <form class="form-field-full">
+        <app-form-input [form]="form" [input]="enableCloudDeployment"></app-form-input>
+        <app-form-input
+            [form]="form"
+            [input]="cloudProvider"
+            (dropdownValueUpdated)="onCloudProviderUpdate($event)"
+        ></app-form-input>
+        <app-form-input [form]="form" [input]="instance"></app-form-input>
+        <button mat-raised-button color="primary" class="m-t-8" (click)="onSave()">
+            {{ 'others.save' | translate }}
+        </button>
+    </form>
+</mat-card>

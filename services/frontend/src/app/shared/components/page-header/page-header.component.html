@@ -1,0 +1,6 @@
+<div class="d-flex justify-content-between align-items-center mt-2 mb-3">
+    <h2>{{ title | translate }}</h2>
+    <button mat-mini-fab color="primary" (click)="iconClicked.emit()" *ngIf="icon">
+        <mat-icon>{{ icon }}</mat-icon>
+    </button>
+</div>

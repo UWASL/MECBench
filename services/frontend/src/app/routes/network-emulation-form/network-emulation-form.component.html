@@ -1,0 +1,18 @@
+<app-page-header title="configuration.network-emulation-configuration"></app-page-header>
+<mat-card>
+    <form class="form-field-full">
+        <app-form-input [form]="form" [input]="enableClientSideEmulation"></app-form-input>
+        <app-form-input [form]="form" [input]="clientTcDelay"></app-form-input>
+        <app-form-input [form]="form" [input]="clientTcJitter"></app-form-input>
+        <app-form-input [form]="form" [input]="clientTcBandwidth"></app-form-input>
+        <app-form-input [form]="form" [input]="clientRandomLoss"></app-form-input>
+        <app-form-input [form]="form" [input]="enableServerSideEmulation"></app-form-input>
+        <app-form-input [form]="form" [input]="serverTcDelay"></app-form-input>
+        <app-form-input [form]="form" [input]="serverTcJitter"></app-form-input>
+        <app-form-input [form]="form" [input]="serverTcBandwidth"></app-form-input>
+        <app-form-input [form]="form" [input]="serverRandomLoss"></app-form-input>
+        <button mat-raised-button color="primary" class="m-t-8" (click)="onSave()">
+            {{ 'others.save' | translate }}
+        </button>
+    </form>
+</mat-card>

@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-title>
+        {{ profile.name }}
+    </mat-card-title>
+    <mat-card-content>
+        <p>{{ profile.description }}</p>
+    </mat-card-content>
+    <mat-card-actions class="d-flex justify-content-between">
+        <div>
+            <button mat-icon-button color="primary" (click)="openProfileForm()">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="openConfirmationDialog()">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+        <app-form-input
+            [form]="form"
+            [input]="selectProfile"
+            (checkboxValueUpdated)="onProfileSelectUpdate($event)"
+        ></app-form-input>
+    </mat-card-actions>
+</mat-card>

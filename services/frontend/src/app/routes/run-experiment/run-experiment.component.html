@@ -1,0 +1,13 @@
+<h2>{{ 'experiments.run-experiment' | translate }}</h2>
+<mat-card>
+    <form class="form-field-full">
+        <app-form-input [form]="form" [input]="eid"></app-form-input>
+        <button mat-raised-button color="primary" class="m-t-8" (click)="onRunClick()">
+            {{ 'experiments.run' | translate }}
+        </button>
+    </form>
+    <div *ngIf="experimentRunning" class="mt-3">
+        {{ 'experiments.experiment-is-running' | translate }}
+        <mat-progress-bar mode="indeterminate" class="mt-3"></mat-progress-bar>
+    </div>
+</mat-card>

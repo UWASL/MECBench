@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-between">
+    <h1 mat-dialog-title>{{ 'others.confirm-action' | translate }}</h1>
+    <button mat-icon-button mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+<div mat-dialog-content class="form-field-full mb-2">
+    {{ message | translate }}
+</div>
+<div mat-dialog-actions class="d-flex justify-content-center">
+    <button mat-raised-button mat-dialog-close class="me-2">
+        {{ 'others.no' | translate }}
+    </button>
+    <button mat-raised-button color="primary" (click)="dialogRef.close('confirmed')" class="ms-2">
+        {{ 'others.yes' | translate }}
+    </button>
+</div>

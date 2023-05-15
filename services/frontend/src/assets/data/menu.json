@@ -1,0 +1,49 @@
+{
+    "menu": [
+        {
+            "route": "/configuration",
+            "name": "configuration",
+            "type": "sub",
+            "icon": "settings",
+            "children": [
+                {
+                    "route": "load-generator",
+                    "name": "load-generator",
+                    "type": "link"
+                },
+                {
+                    "route": "system-under-test",
+                    "name": "system-under-test",
+                    "type": "link"
+                },
+                {
+                    "route": "network-emulation",
+                    "name": "network-emulation",
+                    "type": "link"
+                },
+                {
+                    "route": "cloud-deployment",
+                    "name": "cloud-deployment",
+                    "type": "link"
+                },
+                {
+                    "route": "profile-selection",
+                    "name": "profile-selection",
+                    "type": "link"
+                }
+            ]
+        },
+        {
+            "route": "run-experiment",
+            "name": "run-experiment",
+            "type": "link",
+            "icon": "science"
+        },
+        {
+            "route": "experiment-results",
+            "name": "experiment-results",
+            "type": "link",
+            "icon": "query_stats"
+        }
+    ]
+}

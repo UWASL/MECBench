@@ -1,0 +1,21 @@
+<h2>{{ 'experiments.experiment-results' | translate }}</h2>
+<mat-card>
+    <form class="form-field-full">
+        <app-form-input [form]="form" [input]="eid"></app-form-input>
+        <button mat-raised-button color="primary" class="m-t-8" (click)="onGetResultsClick()">
+            {{ 'experiments.get-results' | translate }}
+        </button>
+    </form>
+</mat-card>
+<div class="my-2" *ngIf="latencyChartOptions">
+    <app-chart
+        [chartOptions]="latencyChartOptions"
+        [colors]="['#662e9b', '#f9ce1d', '#666666']"
+    ></app-chart>
+</div>
+<div class="my-2" *ngIf="qpsChartOptions">
+    <app-chart [chartOptions]="qpsChartOptions" [colors]="['#662e9b']"></app-chart>
+</div>
+<div class="my-2" *ngIf="latencyQpsChartOptions">
+    <app-chart [chartOptions]="latencyQpsChartOptions" [colors]="['#662e9b']"></app-chart>
+</div>

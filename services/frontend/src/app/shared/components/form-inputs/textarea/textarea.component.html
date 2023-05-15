@@ -1,0 +1,23 @@
+<div [formGroup]="form">
+    <mat-form-field>
+        <mat-label>{{ input.label | translate }}</mat-label>
+        <textarea
+            matInput
+            [formControlName]="input.key"
+            cdkTextareaAutosize
+            #autosize="cdkTextareaAutosize"
+            [cdkAutosizeMinRows]="input.config.minRows || '5'"
+            [cdkAutosizeMaxRows]="input.config.maxRows || '100'"
+        ></textarea>
+        <mat-hint *ngIf="input.config.hint">{{ input.config.hint | translate }}</mat-hint>
+        <mat-error *ngIf="form.controls[input.key]?.errors?.required">
+            {{ 'validations.required' | translate }}
+        </mat-error>
+        <mat-error *ngIf="form.controls[input.key]?.errors?.min">
+            {{ 'validations.min' | translate: { number: input.validation.min } }}
+        </mat-error>
+        <mat-error *ngIf="form.controls[input.key]?.errors?.max">
+            {{ 'validations.max' | translate: { number: input.validation.max } }}
+        </mat-error>
+    </mat-form-field>
+</div>

@@ -1,0 +1,12 @@
+<app-page-header
+    title="configuration.profile-selection-configuration"
+    icon="add"
+    (iconClicked)="openAddProfileForm()"
+></app-page-header>
+<app-profile-card
+    *ngFor="let profile of profiles; index as i"
+    [profile]="profile"
+    [selected]="selectedProfiles[i]"
+    (profileUpdated)="getAllProfiles()"
+    (profileSelected)="onProfileSelected(profile)"
+></app-profile-card>

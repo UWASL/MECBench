@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-between">
+    <h1 mat-dialog-title *ngIf="!profile">{{ 'configuration.add-a-profile' | translate }}</h1>
+    <h1 mat-dialog-title *ngIf="profile">{{ 'configuration.update-profile' | translate }}</h1>
+    <button mat-icon-button mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+<div mat-dialog-content [formGroup]="form" class="form-field-full">
+    <app-form-input [input]="name" [form]="form"></app-form-input>
+    <app-form-input [input]="description" [form]="form"></app-form-input>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onSave()">
+        {{ 'others.save' | translate }}
+    </button>
+</div>

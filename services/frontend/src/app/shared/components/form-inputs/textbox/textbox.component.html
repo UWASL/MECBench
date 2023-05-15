@@ -1,0 +1,16 @@
+<div [formGroup]="form">
+    <mat-form-field>
+        <mat-label>{{ input.label | translate }}</mat-label>
+        <input matInput [formControlName]="input.key" [type]="input.type || 'text'" />
+        <mat-hint *ngIf="input.config.hint">{{ input.config.hint | translate }}</mat-hint>
+        <mat-error *ngIf="form.controls[input.key]?.errors?.required">
+            {{ 'validations.required' | translate }}
+        </mat-error>
+        <mat-error *ngIf="form.controls[input.key]?.errors?.min">
+            {{ 'validations.min' | translate: { number: input.validation.min } }}
+        </mat-error>
+        <mat-error *ngIf="form.controls[input.key]?.errors?.max">
+            {{ 'validations.max' | translate: { number: input.validation.max } }}
+        </mat-error>
+    </mat-form-field>
+</div>

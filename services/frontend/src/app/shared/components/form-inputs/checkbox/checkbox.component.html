@@ -1,0 +1,9 @@
+<div [formGroup]="form">
+    <mat-checkbox
+        [formControlName]="input.key"
+        class="checkbox"
+        [color]="input.config.color || 'primary'"
+        (change)="valueUpdated.emit()">
+        {{ input.label | translate }}
+    </mat-checkbox>
+</div>

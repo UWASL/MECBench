@@ -1,0 +1,20 @@
+<app-page-header
+    title="configuration.profile-selection-configuration"
+    icon="add"
+    (iconClicked)="openAddProfileForm()"
+></app-page-header>
+<mat-card>
+    <form class="form-field-full">
+        <app-form-input
+            [form]="form"
+            [input]="profile"
+            (dropdownValueUpdated)="onProfileUpdate($event)"
+        ></app-form-input>
+        <div class="m-b-8" *ngIf="description">
+            {{ description }}
+        </div>
+        <button mat-raised-button color="primary" class="m-t-8" (click)="onSave()">
+            {{ 'others.select' | translate }}
+        </button>
+    </form>
+</mat-card>

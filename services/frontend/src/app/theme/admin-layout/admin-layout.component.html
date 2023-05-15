@@ -1,0 +1,34 @@
+
+<div class="matero-container-wrap matero-navbar-side matero-header-fixed matero-header-white"
+     [ngClass]="{'matero-sidenav-collapsed': options.sidenavCollapsed}"
+     dir="ltr">
+  <ng-progress [spinner]="false"></ng-progress>
+
+  <mat-sidenav-container class="matero-container" autosize autoFocus>
+    <mat-sidenav #sidenav class="matero-sidenav"
+                 [mode]="isOver ? 'over' : 'side'"
+                 [opened]="options.sidenavOpened && !isOver"
+                 (openedChange)="onSidenavOpenedChange($event)"
+                 (closedStart)="onSidenavClosedStart()">
+      <app-sidebar [showToggle]="!isOver"
+                   (toggleCollapsed)="toggleCollapsed()"
+                   [toggleChecked]="!!options.sidenavCollapsed">
+      </app-sidebar>
+    </mat-sidenav>
+
+    <mat-sidenav #sidenavNotice position="end" mode="over">
+      <app-sidebar-notice></app-sidebar-notice>
+    </mat-sidenav>
+
+    <mat-sidenav-content #content class="matero-content-wrap">
+      <app-header [showToggle]="!options.sidenavCollapsed"
+                  (toggleSidenav)="sidenav.toggle()"
+                  (toggleSidenavNotice)="sidenavNotice.toggle()">
+      </app-header>
+
+      <div class="matero-content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

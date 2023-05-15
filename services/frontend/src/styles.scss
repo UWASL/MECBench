@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@use 'app/theme/style';
+@use 'styles/themes';
+@use 'styles/custom';
+@use 'styles/grid';
+@use 'styles/helpers';
+@use 'styles/plugins';
+
+mat-label {
+    // font-size: 20px;
+    color: rgb(76, 76, 76);
+}
