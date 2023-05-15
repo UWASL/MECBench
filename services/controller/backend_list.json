@@ -1,0 +1,162 @@
+{
+    "backends": [
+        {
+            "id": "onnxruntime",
+            "name": "Onnxruntime",
+            "supported_models": [
+                "ssd-mobilenet-300"
+            ]
+        },
+        {
+            "id": "tensorflow",
+            "name": "Tensor Flow",
+            "supported_models": [
+                "d0",
+                "d1",
+                "d2",
+                "d3"
+            ]
+        },
+        {
+            "id": "spacy",
+            "name": "SpaCy",
+            "supported_models":[
+                "spacy-sm"
+            ]
+        }
+    ],
+    "models": [
+        {
+            "link": "s3://mlperf-cocodatasets/ssd-mobilenet.tar.gz",
+            "name": "SSD-Mobilenet 300x300",
+            "id": "ssd-mobilenet-300",
+            "supported_datasets": [
+                "coco-300",
+                "coco-512",
+                "coco-640",
+                "coco-768",
+                "coco-896"
+            ],
+            "model-path": "ssd-mobilenet"
+        },
+        {
+            "link": "s3://mlperf-cocodatasets/d0.tar.gz",
+            "name": "EffecientDet-0 512x512",
+            "id": "d0",
+            "supported_datasets": [
+                "coco-300",
+                "coco-512",
+                "coco-640",
+                "coco-768",
+                "coco-896"
+            ],
+            "model-path": "ssd-mobilenet"
+        },
+        {
+            "link": "s3://mlperf-cocodatasets/d1.tar.gz",
+            "name": "EffecientDet-1 640x640",
+            "id": "d1",
+            "supported_datasets": [
+                "coco-300",
+                "coco-512",
+                "coco-640",
+                "coco-768",
+                "coco-896"
+            ],
+            "model-path": "ssd-mobilenet"
+        },
+        {
+            "link": "s3://mlperf-cocodatasets/d2.tar.gz",
+            "name": "EffecientDet-2 768x768",
+            "id": "d2",
+            "supported_datasets": [
+                "coco-300",
+                "coco-512",
+                "coco-640",
+                "coco-768",
+                "coco-896"
+            ],
+            "model-path": "ssd-mobilenet"
+        },
+        {
+            "link": "s3://mlperf-cocodatasets/d3.tar.gz",
+            "name": "EffecientDet-3 896x896",
+            "id": "d3",
+            "supported_datasets": [
+                "coco-300",
+                "coco-512",
+                "coco-640",
+                "coco-768",
+                "coco-896"
+            ],
+            "model-path": "ssd-mobilenet"
+        },
+        {
+            "link": "s3://mlperf-cocodatasets/spacy_sm.tar.gz",
+            "name": "SpaCy-sm",
+            "id": "spacy-sm",
+            "supported_datasets": [
+                "squad"
+            ],
+            "model-path": "en_core_web_sm"
+        }
+    ],
+    "datasets": [
+        {
+            "link": "s3://mlperf-cocodatasets/300.tar.gz",
+            "name": "300x300 COCO",
+            "id": "coco-300",
+            "properties": {
+                "model-shape": "300"
+            }
+        },
+        {
+            "link": "s3://mlperf-cocodatasets/512.tar.gz",
+            "name": "512x512 COCO",
+            "id": "coco-512",
+            "properties": {
+                "model-shape": "512"
+            }
+        },
+        {
+            "link": "s3://mlperf-cocodatasets/640.tar.gz",
+            "name": "640x640 COCO",
+            "id": "coco-640",
+            "properties": {
+                "model-shape": "640"
+            }
+        },
+        {
+            "link": "s3://mlperf-cocodatasets/768.tar.gz",
+            "name": "768x768 COCO",
+            "id": "coco-768",
+            "properties": {
+                "model-shape": "768"
+            }
+        },
+        {
+            "link": "s3://mlperf-cocodatasets/896.tar.gz",
+            "name": "896x896 COCO",
+            "id": "coco-896",
+            "properties": {
+                "model-shape": "896"
+            }
+        },
+        {
+            "link": "s3://mlperf-cocodatasets/text.tar.gz",
+            "name": "SQuAD",
+            "id": "squad",
+            "properties": {}
+        },
+        {
+            "link": "s3://mlperf-cocodatasets/300_small.tar.gz",
+            "name": "300x300 COCO Compressed",
+            "id": "coco-300-jpeg",
+            "properties": {
+                "model-shape": "300",
+                "compression": "jpeg"
+            }
+        }
+
+    ]
+}
