@@ -1,0 +1,18 @@
+FROM ubuntu:20.04
+
+WORKDIR /workspace/storage
+
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+    git \
+    python3-pip \
+    python3-flask 
+RUN rm -rf /var/lib/apt/lists/*
+
+COPY storage.py storage.py
+COPY requirements.txt requirements.txt
+COPY default_profiles.json default_profiles.json
+
+RUN pip3 install -r requirements.txt
+
+ENTRYPOINT ["python3", "./storage.py"]
