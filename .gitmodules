@@ -1,0 +1,3 @@
+[submodule "services/cifss"]
+	path = services/cifss
+	url = https://github.com/omarnaman/cifss.git
