@@ -1,0 +1,6 @@
+onnxruntime
+tensorflow
+spacy
+grpcio
+requests
+tqdm

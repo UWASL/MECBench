@@ -8,10 +8,12 @@ __pycache__/
 
 # C extensions
 *.so
+loadgen/build/**/build
+SUT/build/**/build
 
 # Distribution / packaging
 .Python
-loadgen/build/**/build
+
 develop-eggs/
 dist/
 downloads/

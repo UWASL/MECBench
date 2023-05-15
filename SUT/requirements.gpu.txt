@@ -1,0 +1,5 @@
+onnxruntime-gpu
+tensorflow
+grpcio
+requests
+tqdm
