@@ -11,7 +11,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
+loadgen/build/**/build
 develop-eggs/
 dist/
 downloads/
@@ -55,3 +55,33 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+*.vscode
+*__pycache__
+*/workspace/*/*_out
+*.zip
+*/build/**/basic_pb2*.py
+ssd-mobilenet
+loadgen/build/c_loadgen/build
+*libmlperf_loadgen.a
+__pycache__/
+generated/
+*.npy
+*.bytes
+*.png
+*.jpg
+loadgen/build/cppimp/build
+*.a
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
+*.pdf
