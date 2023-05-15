@@ -1,3 +1,6 @@
 [submodule "services/cifss"]
 	path = services/cifss
 	url = https://github.com/omarnaman/cifss.git
+[submodule "SUT/build/python/USPP"]
+	path = SUT/build/python/USPP
+	url = https://github.com/omarnaman/USPP.git
