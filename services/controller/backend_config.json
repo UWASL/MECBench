@@ -1,0 +1,11 @@
+{
+    "loadgen_image": "IMAGE_NAME",
+    "sut_image": "IMAGE_NAME",
+    "cifss_image": "IMAGE_NAME",
+    "storage_image": "IMAGE_NAME",
+    "mlperf_storage_server": "STORAGE_SERVER_PUBLIC_ADDRESS",
+    "mlperf_storage_server_k8s": "STORAGE_SERVER_K8S_ADDRESS",
+    "file_storage_server": "CIFFS_SERVER_PUBLIC_ADDRESS",
+    "file_storage_server_k8s": "CIFS_SERVER_K8S_ADDRESS",
+    "sut_address_k8s": "SUT_K8S_ADDRESS",
+}
